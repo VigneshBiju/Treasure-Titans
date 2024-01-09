@@ -319,9 +319,9 @@ function aboutgame() {
     confirmButtonText: "LET  THE TREASURE TITAN BEGIN!!",
     confirmButtonColor: "green"
   },
-    function () {
+    function (isConfirm) { if (isConfirm) {
       gameState = "wait"
-    }
+    }}
   )
 
 
@@ -431,8 +431,9 @@ function level2popup() {
     confirmButtonText: "LEVEL 2",
     confirmButtonColor: "red"
   },
-    function () {
-      gameState = "level2"
+    function (isConfirm) {
+      if (isConfirm) {
+      gameState = "level2"}
     }
   )
 
